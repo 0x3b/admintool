@@ -60,7 +60,7 @@ public class AdminToolListener extends PluginListener {
                                 toolArgs.remove(userIndex);
                                 userModes.remove(userIndex);
                             }
-                            player.sendMessage(Colors.LightGreen + "Destroy Block tool disabled");
+                            player.sendMessage(Colors.Rose + "Destroy Block tool disabled");
                         }
                         return true;
                     }
@@ -75,7 +75,7 @@ public class AdminToolListener extends PluginListener {
                             toolArgs.add("null");
                             userModes.add("db");
                         }
-                        player.sendMessage(Colors.Rose + "Destroy Block tool enabled");
+                        player.sendMessage(Colors.LightGreen + "Destroy Block tool enabled");
                         return true;
                     }
 
@@ -84,11 +84,11 @@ public class AdminToolListener extends PluginListener {
                             int userIndex = enabledUsers.indexOf(playerName);
                             String userMode = userModes.get(userIndex).toString();
                             if(userMode.equals("db")) {
-                                player.sendMessage(Colors.Red + "Destroy Block tool is enabled");
+                                player.sendMessage("Destroy Block tool is " + Colors.Green + "ON");
                                 return true;
                             }
                         }
-                        player.sendMessage(Colors.Green + "Destroy Block tool is disabled");
+                        player.sendMessage(Colors.Green + "Destroy Block tool is " + Colors.Red + "OFF");
                         return true;
                     }
                 } else {
