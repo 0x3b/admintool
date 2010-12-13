@@ -28,3 +28,10 @@ Saying ``/admintool`` or ``/adm`` should present a list of tools that you are
 permitted to use with your current permissions. ``/admintool TOOLNAME`` will
 show help for that individual tool.
 
+--------
+Building
+--------
+To build AdminTool, you currently need a JDK and Ant. Running ``ant`` should
+suffice. You *must* have ``minecraft_server.jar`` (from the original Minecraft
+server distribution) and ``Minecraft_Mod.jar`` (from hMod) to build AdminTool!
+
