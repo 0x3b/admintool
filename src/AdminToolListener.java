@@ -13,7 +13,7 @@ public class AdminToolListener extends PluginListener {
     private ArrayList toolArgs = new ArrayList();
     private ArrayList userModes = new ArrayList();
     private static final Logger logger = Logger.getLogger("Minecraft");
-    
+
     @Override
     public void onBlockRightClicked(Player player, Block blockClicked, Item item) {
         String playerName = player.getName();
