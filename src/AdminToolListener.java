@@ -43,7 +43,7 @@ public class AdminToolListener extends PluginListener {
             }
 
             if(split[1].equalsIgnoreCase("destroyblock") || split[1].equalsIgnoreCase("db")) {
-                if(player.canUseCommand("/admintool_db")) {
+                if(player.canUseCommand("/admintool_destroyblock")) {
                     if(split.length != 3) {
                         player.sendMessage("Usage: /admintool destroyblock COMMAND");
                         player.sendMessage("COMMAND can be one of:");
