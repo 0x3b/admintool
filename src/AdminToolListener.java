@@ -72,7 +72,7 @@ public class AdminToolListener extends PluginListener {
                             userModes.set(userIndex, "db");
                         } else {
                             enabledUsers.add(playerName);
-                            toolArgs.add("null");
+                            toolArgs.add("");
                             userModes.add("db");
                         }
                         player.sendMessage(Colors.LightGreen + "Destroy Block tool enabled");
