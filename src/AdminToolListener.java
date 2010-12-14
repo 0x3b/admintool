@@ -88,7 +88,7 @@ public class AdminToolListener extends PluginListener {
                                 return true;
                             }
                         }
-                        player.sendMessage(Colors.Green + "Destroy Block tool is " + Colors.Red + "OFF");
+                        player.sendMessage("Destroy Block tool is " + Colors.Red + "OFF");
                         return true;
                     }
                 } else {
