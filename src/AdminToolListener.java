@@ -9,9 +9,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class AdminToolListener extends PluginListener {
-    private ArrayList enabledUsers = new ArrayList();
-    private ArrayList toolArgs = new ArrayList();
-    private ArrayList userModes = new ArrayList();
+    private ArrayList<String> enabledUsers = new ArrayList<String>();
+    private ArrayList<String> toolArgs = new ArrayList<String>();
+    private ArrayList<String> userModes = new ArrayList<String>();
     private static final Logger logger = Logger.getLogger("Minecraft");
 
     @Override
