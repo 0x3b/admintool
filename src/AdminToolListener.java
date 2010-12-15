@@ -17,15 +17,19 @@ public class AdminToolListener extends PluginListener {
     @Override
     public void onBlockRightClicked(Player player, Block blockClicked, Item item) {
         String playerName = player.getName();
-        if(enabledUsers.contains(playerName) && player.canUseCommand("/admintool") && item.getType() == Item.Type.Book) {
-            int userIndex = enabledUsers.indexOf(playerName);
-            String userMode = userModes.get(userIndex).toString();
-            String toolArg = toolArgs.get(userIndex).toString();
-            if(userMode.equals("db")) {
-                player.sendMessage("Destroying block type " + blockClicked.getType() + " at " + blockClicked.getX() + "," + blockClicked.getY() + "," + blockClicked.getZ());
-                blockClicked.setType(0);
-                blockClicked.update();
+        if(player.canUseCommand("/admintool") && item.getType() == Item.Type.Book) {
+            if(enabledUsers.contains(playerName)) {
+                int userIndex = enabledUsers.indexOf(playerName);
+                String userMode = userModes.get(userIndex).toString();
+                String toolArg = toolArgs.get(userIndex).toString();
+                if(userMode.equals("db")) {
+                    player.sendMessage("Destroying block type " + blockClicked.getType() + " at " + blockClicked.getX() + "," + blockClicked.getY() + "," + blockClicked.getZ());
+                    blockClicked.setType(0);
+                    blockClicked.update();
+                    return;
+                }
             }
+            player.sendMessage("You do not have a tool enabled!");
         }
     }
 
