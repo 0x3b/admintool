@@ -172,7 +172,7 @@ public class AdminToolListener extends PluginListener {
                         if(enabledUsers.contains(playerName)) {
                             int userIndex = enabledUsers.indexOf(playerName);
                             String userMode = userModes.get(userIndex).toString();
-                            if (userMode.equals("db")) {
+                            if(userMode.equals("db")) {
                                 enabledUsers.remove(userIndex);
                                 toolArgs.remove(userIndex);
                                 userModes.remove(userIndex);
