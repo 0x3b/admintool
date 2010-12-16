@@ -185,7 +185,7 @@ public class AdminToolListener extends PluginListener {
                     if(split[2].equalsIgnoreCase("enable")) {
                         if(enabledUsers.contains(playerName)) {
                             int userIndex = enabledUsers.indexOf(playerName);
-                            toolArgs.set(userIndex, null);
+                            toolArgs.set(userIndex, "");
                             userModes.set(userIndex, "db");
                         } else {
                             enabledUsers.add(playerName);
